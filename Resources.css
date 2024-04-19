@@ -1,0 +1,36 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#header1{
+    text-align: center;
+    text-decoration: underline;
+}
+table{
+    width: 100%;
+    border-style: groove;
+}
+a:hover {
+    color: green;
+}
+a:active{
+    color: salmon;
+}
+a:visited{
+    color: red;
+}
+nav {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
