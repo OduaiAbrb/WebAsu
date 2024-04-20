@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href = "core.css" rel = "stylesheet">
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav>
+        <a href="Index.html">Home</a>
+        <a href="AboutUs.html">About us</a>
+        <a href="Reviews.html">Reviews</a>
+        <a href="Products.html">Products</a>
+        <a href="ContactUs.html" style = "color: red">Contact Us</a>
+        <a href="Resources.html">Resources</a>
+    </nav>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="/submit-contact" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <input type="submit" value="Submit">
+        </form>
+        
+        <h3>Contact Information</h3>
+        <p><strong>Email:</strong> oduaiabrb@gmail.com</p>
+        <p><Strong>Phone:</Strong> +9620796977413</p>
+        <p><strong>Amman, shafabadran</strong> </p>
+        
+        <h3 class="social-media">Social Media</h3>
+        <ul>
+            <li><a href="https://www.facebook.com/example">Facebook</a></li>
+            <li><a href="https://www.twitter.com/example">Twitter</a></li>
+            <li><a href="https://www.instagram.com/example">Instagram</a></li>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2024 Computer Store. All rights reserved.</p>
+    </footer>    
+</body>
+</html>
