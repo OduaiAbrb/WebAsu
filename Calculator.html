@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comuter Store</title>
+    <link rel="stylesheet" href="extenral.css">
+
+</head>
+<body>
+    <header>
+        <h1>computer store</h1>
+    </header>
+    <p>prouducts number : <input type="number" name="p number" id="txt1"> <span id="message1" class="red" style="color: red;"></span></p>
+    <p>days: <input type="number" name="days" id="txt2"> <span id = "message2" style = "color: red;"></span></p> 
+    <form id="forms" >
+
+        Gender :
+        <input type="radio" name="gender" value="male">male
+        <input type="radio" name="gender" value="female">female
+        <span id = "message3" style = "color: red;"></span>
+        <br><br>
+    </form>
+    <form >
+            type :
+        <input type="checkbox" name="type" value="pc">pc</input>
+        <input type="checkbox" name="type" value="Laptop">laptop</input>
+        <span id = "message4" style = "color: red;"></span>
+        </form>
+        <br>
+    <br><br>
+    <input type="button" onclick="cal()" value="Rent PRICE"/>
+    <br><br>
+    <div>
+    <textarea id="tarea" rows="15" cols="20">      </textarea>
+    </div>
+    <script>
+        function cal(){
+        var choice1 = "", choice2 = "";
+        var check = true;
+        var x=document.getElementById("txt1").value;
+        var y=document.getElementById("txt2").value;
+        var radios=document.getElementsByName("gender");
+        var checkbtn=document.getElementsByName("type");
+        if(x<=0 || x == null)
+        {
+            document.getElementById("message1").innerHTML="enter a valid number of product";
+            check = false;
+        }
+        if (y<=0 || y == null)
+        {
+            document.getElementById("message2").innerHTML="enter a valid number of days";
+            check = false;
+        }
+        
+    var rent=x*y;
+    for(var i=0 ;i<radios.length;i++)
+    {
+        if(radios[i].checked)
+        {
+            choice1 += radios[i].value;
+            break;
+        }
+    }
+    for(var e=0 ;e < checkbtn.length;e++)
+    {
+        if(checkbtn[e].checked)
+        {
+            choice2 += checkbtn[e].value + " - ";
+        } 
+    }
+    if (choice1 == "")
+    {
+        document.getElementById("message3").innerHTML = "Please choose a gender";
+        check = false;
+    }
+    if (choice2 == "") 
+    {
+        document.getElementById("message4").innerHTML = "Please choose the type";
+        check = false;
+    }
+    if (check == true)
+        document.getElementById('tarea').innerHTML= "gender: "+choice1+" " +"\nproducts: "+x+"  "+"\ndays: "+y+" "+"\nRent Price: "+rent+"jd"+" "+"\nProduct Type: "+choice2;
+}
+    </script>
+</body>

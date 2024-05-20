@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <link href = "core.css" rel = "stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-center">
+        <div class="container-fluid justify-content-center" id = "navBarUsingIdDiv1">
+        <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="Index.html">Home</a>
+              <a class="nav-link" href="AboutUs.html">About Us</a>
+              <a class="nav-link" href="Reviews.html">Reviews</a>
+              <a class="nav-link" href="Products.html">Products</a>
+              <a class="nav-link" href="ContactUs.html" style = "color: rgb(181, 30, 30);">Contact Us</a>
+              <a class="nav-link" href="Resources.html">Resources</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+    <script>
+        var currentDate = new Date();
+        var dateTime = currentDate.toLocaleString();
+        document.write('<p style="font-size: 18px; font-weight: bold; color:darkblue" >Date and Time: ' + dateTime + '</p>');
+    </script>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form action="submit_form.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" class="form-control" id="age" name="age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Item Quantity:</label>
+                        <input type="number" class="form-control" id="quantity" name="quantity" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="income">Income:</label>
+                        <input type="number" class="form-control" id="income" name="income" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="male" name="gender" value="male" required>
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="female" name="gender" value="female" required>
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="interests">Interests:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="programming" name="interests" value="programming">
+                            <label class="form-check-label" for="programming">Programming</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="design" name="interests" value="design">
+                            <label class="form-check-label" for="design">Design</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label><br>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6 offset-md-3">
+                <p>Back to <a href="index.html">Home</a></p>
+</html>
